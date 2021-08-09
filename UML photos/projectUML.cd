@@ -1,0 +1,503 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Flight_Inspection_App.Client" Collapsed="true">
+    <Position X="17.5" Y="4" Width="1.25" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAwAAAAAAAAAAEBAAAAAAIAEQAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Client.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flight_Inspection_App.FGM" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.75" Y="4" Width="1.25" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>EAaIR6URjGsBcilApMh5qIhE6IASfA0CIA0IIzNIcFg=</HashCode>
+      <FileName>FGM.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_telnetClient" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Flight_Inspection_App.FGVM" Collapsed="true">
+    <Position X="10.5" Y="4" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAQEAAAAACCAAAAEoAAAAIAIgAAAAAAEAAAAAAAAACA=</HashCode>
+      <FileName>FGVM.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_fgm" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Flight_Inspection_App.HomePage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="21.25" Y="4.25" Width="1.25" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="s" Type="Flight_Inspection_App.Simulator">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.533" Y="0.255" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="_vm" Type="Flight_Inspection_App.FGVM" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="21.25" Y="4.75" />
+        <Point X="11.733" Y="4.75" />
+        <Point X="11.733" Y="4.562" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.62" Y="0.298" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAQAAAIAAAAAAAgAAAAAAAgIAAAAAAAAE=</HashCode>
+      <FileName>HomePage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="s" />
+      <Field Name="_vm" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Flight_Inspection_App.MainWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15.25" Y="1" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="_home" Type="Flight_Inspection_App.HomePage" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="16.75" Y="1.499" />
+        <Point X="21.927" Y="1.499" />
+        <Point X="21.927" Y="4.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.736" Y="0.616" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="_vm" Type="Flight_Inspection_App.FGVM" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="15.25" Y="1.499" />
+        <Point X="11.719" Y="1.499" />
+        <Point X="11.719" Y="4" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.707" Y="0.153" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAIAgAAAAAAAgAQAAAAAAAA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_home" />
+      <Field Name="_vm" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Flight_Inspection_App.Simulator" Collapsed="true">
+    <Position X="21.5" Y="6" Width="1.25" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="_vm" Type="Flight_Inspection_App.FGVM" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="21.5" Y="6.087" />
+        <Point X="11.25" Y="6.087" />
+        <Point X="11.25" Y="4.562" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.599" Y="0.986" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="_cbvm" Type="Flight_Inspection_App.ControlBarVM" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="22.073" Y="6.691" />
+        <Point X="22.073" Y="7.188" />
+        <Point X="24" Y="7.188" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="_fcvm" Type="Flight_Inspection_App.FileComponentVM" ManuallyRouted="true">
+      <Path>
+        <Point X="22.073" Y="6.691" />
+        <Point X="22.073" Y="8.444" />
+        <Point X="4.875" Y="8.444" />
+        <Point X="4.875" Y="7.691" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="_fpvm" Type="Flight_Inspection_App.FeaturesPanelVM" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="22.073" Y="6.691" />
+        <Point X="22.073" Y="8.444" />
+        <Point X="2.625" Y="8.444" />
+        <Point X="2.625" Y="7.691" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="_fegvm" Type="Flight_Inspection_App.FeaturesGraphsVM" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="22.073" Y="6.691" />
+        <Point X="22.073" Y="8.444" />
+        <Point X="7.125" Y="8.444" />
+        <Point X="7.125" Y="7.691" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="_fivm" Type="Flight_Inspection_App.FlightInstrumentsVM" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="22.073" Y="6.691" />
+        <Point X="22.073" Y="8.444" />
+        <Point X="9.312" Y="8.444" />
+        <Point X="9.312" Y="7.691" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="_jvm" Type="Flight_Inspection_App.JoystickVM" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="22.073" Y="6.691" />
+        <Point X="22.073" Y="8.444" />
+        <Point X="13.562" Y="8.444" />
+        <Point X="13.562" Y="7.691" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="_alvm" Type="Flight_Inspection_App.AnomaliesListVM" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="22.073" Y="6.691" />
+        <Point X="22.073" Y="8.444" />
+        <Point X="11.5" Y="8.444" />
+        <Point X="11.5" Y="7.691" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="_mdvm" Type="Flight_Inspection_App.MultiDimensionalModelVM" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="22.073" Y="6.691" />
+        <Point X="22.073" Y="8.444" />
+        <Point X="15.875" Y="8.444" />
+        <Point X="15.875" Y="7.691" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>DEEEBAgAAAAABLQECAAAggEAIAgAAAAQgAAAAABAAAA=</HashCode>
+      <FileName>Simulator.xaml.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_vm" />
+      <Field Name="_cbvm" />
+      <Field Name="_fcvm" />
+      <Field Name="_fpvm" />
+      <Field Name="_fegvm" />
+      <Field Name="_fivm" />
+      <Field Name="_jvm" />
+      <Field Name="_alvm" />
+      <Field Name="_mdvm" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Flight_Inspection_App.ControlBarVM" Collapsed="true">
+    <Position X="24" Y="7" Width="1.5" />
+    <InheritanceLine Type="Flight_Inspection_App.FGVM" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="10.5" Y="4.312" />
+        <Point X="0.947" Y="4.312" />
+        <Point X="0.947" Y="8.878" />
+        <Point X="24.438" Y="8.878" />
+        <Point X="24.438" Y="7.691" />
+      </Path>
+    </InheritanceLine>
+    <AssociationLine Name="PauseTheFlight" Type="Flight_Inspection_App.Commands.PauseCommand" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="24.812" Y="7.691" />
+        <Point X="24.812" Y="8.066" />
+        <Point X="26.938" Y="8.066" />
+        <Point X="26.938" Y="7.562" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="PlayTheFlight" Type="Flight_Inspection_App.Commands.PlayCommand" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="24.812" Y="7.691" />
+        <Point X="24.812" Y="8.066" />
+        <Point X="30.5" Y="8.066" />
+        <Point X="30.5" Y="7.562" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="IncreaseTheSpeed" Type="Flight_Inspection_App.Commands.PlusCommand" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="24.812" Y="7.691" />
+        <Point X="24.812" Y="8.066" />
+        <Point X="32.25" Y="8.066" />
+        <Point X="32.25" Y="7.562" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="DecreaseTheSpeed" Type="Flight_Inspection_App.Commands.MinusCommand" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="24.812" Y="7.691" />
+        <Point X="24.812" Y="8.066" />
+        <Point X="28.812" Y="8.066" />
+        <Point X="28.812" Y="7.562" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="StopTheFlight" Type="Flight_Inspection_App.Commands.StopCommand" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="24.812" Y="7.691" />
+        <Point X="24.812" Y="8.066" />
+        <Point X="34" Y="8.066" />
+        <Point X="34" Y="7.562" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAIAJAAAAABQIAQBAgAAQAAAACCAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>ControlBarVM.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="PauseTheFlight" />
+      <Property Name="PlayTheFlight" />
+      <Property Name="IncreaseTheSpeed" />
+      <Property Name="DecreaseTheSpeed" />
+      <Property Name="StopTheFlight" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Flight_Inspection_App.FileComponentVM" Collapsed="true">
+    <Position X="4" Y="7" Width="1.75" />
+    <InheritanceLine Type="Flight_Inspection_App.FGVM" FixedFromPoint="true">
+      <Path>
+        <Point X="11.036" Y="4.562" />
+        <Point X="11.036" Y="6.75" />
+        <Point X="4.875" Y="6.75" />
+        <Point X="4.875" Y="7" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>FileComponentVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flight_Inspection_App.FeaturesGraphsVM" Collapsed="true">
+    <Position X="6.25" Y="7" Width="1.75" />
+    <InheritanceLine Type="Flight_Inspection_App.FGVM" FixedFromPoint="true">
+      <Path>
+        <Point X="11.036" Y="4.562" />
+        <Point X="11.036" Y="6.75" />
+        <Point X="7.125" Y="6.75" />
+        <Point X="7.125" Y="7" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAQABAAACgAAAAAAQIAAAAAgAAYQAAABgggYAAA=</HashCode>
+      <FileName>FeaturesGraphsVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flight_Inspection_App.FlightInstrumentsVM" Collapsed="true">
+    <Position X="8.5" Y="7" Width="1.75" />
+    <InheritanceLine Type="Flight_Inspection_App.FGVM" FixedFromPoint="true">
+      <Path>
+        <Point X="11.036" Y="4.562" />
+        <Point X="11.036" Y="6.75" />
+        <Point X="9.375" Y="6.75" />
+        <Point X="9.375" Y="7" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>ACAAAIAAAAAAAAACAAAAABAAAAAAAgABAAAAAAAAAAA=</HashCode>
+      <FileName>FlightInstrumentsVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flight_Inspection_App.FeaturesPanelVM" Collapsed="true">
+    <Position X="2" Y="7" Width="1.5" />
+    <InheritanceLine Type="Flight_Inspection_App.FGVM" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="11.036" Y="4.562" />
+        <Point X="11.036" Y="6.75" />
+        <Point X="2.688" Y="6.75" />
+        <Point X="2.688" Y="7" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAACAAAAACAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>FeaturesPanelVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flight_Inspection_App.JoystickVM" Collapsed="true">
+    <Position X="12.75" Y="7" Width="1.5" />
+    <InheritanceLine Type="Flight_Inspection_App.FGVM" FixedFromPoint="true">
+      <Path>
+        <Point X="11.036" Y="4.562" />
+        <Point X="11.036" Y="6.75" />
+        <Point X="13.5" Y="6.75" />
+        <Point X="13.5" Y="7" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABBAAAAAAAAAA=</HashCode>
+      <FileName>JoystickVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flight_Inspection_App.MultiDimensionalModelVM" Collapsed="true">
+    <Position X="14.75" Y="7" Width="2.25" />
+    <InheritanceLine Type="Flight_Inspection_App.FGVM" FixedFromPoint="true">
+      <Path>
+        <Point X="11.036" Y="4.562" />
+        <Point X="11.036" Y="6.75" />
+        <Point X="15.875" Y="6.75" />
+        <Point X="15.875" Y="7" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>gAAAAEAAAAAACAECAIQAABBCAAAAAgAAAAAAAAABAAA=</HashCode>
+      <FileName>MultiDimensionalModelVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flight_Inspection_App.AnomaliesListVM" Collapsed="true">
+    <Position X="10.75" Y="7" Width="1.5" />
+    <InheritanceLine Type="Flight_Inspection_App.FGVM" FixedFromPoint="true">
+      <Path>
+        <Point X="11.036" Y="4.562" />
+        <Point X="11.036" Y="6.75" />
+        <Point X="11.5" Y="6.75" />
+        <Point X="11.5" Y="7" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>AnomaliesListVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flight_Inspection_App.Controls.ControlBar" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="32.75" Y="4.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAACAAEAAAA=</HashCode>
+      <FileName>Controls\controlBar.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Flight_Inspection_App.Controls.FeaturesGraphs" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="36.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controls\FeaturesGraphs.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Flight_Inspection_App.Controls.FeaturesPanel" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="34.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controls\FeaturesPanel.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Flight_Inspection_App.Controls.FilesComponent" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="28.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controls\FilesComponent.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Flight_Inspection_App.Controls.FlightInstruments" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="24.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controls\FlightInstruments.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Flight_Inspection_App.Controls.Joystick" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="30.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controls\Joystick.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="System.Windows.Controls.UserControl" Collapsed="true">
+    <Position X="31.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Flight_Inspection_App.Controls.MultiDimensionalModel" Collapsed="true">
+    <Position X="26.25" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controls\MultiDimensionalModel.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Flight_Inspection_App.Controls.AnomaliesList" Collapsed="true">
+    <Position X="38.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controls\AnomaliesList.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Flight_Inspection_App.Commands.MinusCommand" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="28" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAECAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\MinusCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Flight_Inspection_App.Commands.PauseCommand" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="26.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAECAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\PauseCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Flight_Inspection_App.Commands.PlayCommand" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="29.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAECAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\PlayCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Flight_Inspection_App.Commands.PlusCommand" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="31.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAECAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\PlusCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Flight_Inspection_App.Commands.StopCommand" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="33.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAQAAECAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\StopCommand.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="Flight_Inspection_App.IModel" Collapsed="true">
+    <Position X="14.25" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Flight_Inspection_App.IViewModel" Collapsed="true">
+    <Position X="9.75" Y="3" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

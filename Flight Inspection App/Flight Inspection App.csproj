@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <RootNamespace>Flight_Inspection_App</RootNamespace>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="button2.PNG" />
+    <None Remove="Capture.PNG" />
+    <None Remove="Controls\ControlImages\math-add-icon.png" />
+    <None Remove="Controls\ControlImages\math-minus-icon.png" />
+    <None Remove="Controls\ControlImages\Pause-icon.png" />
+    <None Remove="Controls\ControlImages\Play-icon.png" />
+    <None Remove="Controls\ControlImages\Stop-icon.png" />
+    <None Remove="Controls\folder-icon.png" />
+    <None Remove="Images\backgroundImage.jpg" />
+    <None Remove="Images\Heli_bell.obj" />
+    <None Remove="playback_small.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="HelixToolkit" Version="2.15.0" />
+    <PackageReference Include="HelixToolkit.Wpf" Version="2.15.0" />
+    <PackageReference Include="OxyPlot.Wpf" Version="2.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\Capture.PNG" />
+    <Resource Include="Controls\ControlImages\folder-icon.png" />
+    <Resource Include="Controls\ControlImages\math-add-icon.png" />
+    <Resource Include="Controls\ControlImages\math-minus-icon.png" />
+    <Resource Include="Controls\ControlImages\Pause-icon.png" />
+    <Resource Include="Controls\ControlImages\Play-icon.png" />
+    <Resource Include="Controls\ControlImages\Stop-icon.png" />
+    <Resource Include="Images\backgroundImage.jpg" />
+    <Resource Include="playback_small.xml" />
+  </ItemGroup>
+</Project>

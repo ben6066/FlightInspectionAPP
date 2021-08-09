@@ -1,0 +1,37 @@
+<UserControl x:Class="Flight_Inspection_App.Controls.ControlBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Flight_Inspection_App.Controls" xmlns:c="clr-namespace:Flight_Inspection_App"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="1200">
+
+    <Grid>
+        <DockPanel Margin="-10,-23,-15,0">
+            <ToolBar Grid.Row="1" Height="40" VerticalAlignment="Bottom" Grid.ColumnSpan="2">
+                <Separator />
+                <Button Command="{Binding PlayTheFlight}" >
+                    <Image Source="/Controls/ControlImages/Play-icon.png" Height="20" Width="20" Margin="5,0,0,0"/>
+                </Button>
+                <Button Command="{Binding PauseTheFlight}" >
+                    <Image Source="/Controls/ControlImages/Pause-icon.png" Height="20" Width="20" Margin="5,0,0,0" />
+                </Button>
+                <Button Command="{Binding StopTheFlight}">
+                    <Image Source="/Controls/ControlImages/Stop-icon.png" Height="20" Width="20"  Margin="5,0,0,0"/>
+                </Button>
+                <Slider x:Name="sliProgress" Maximum="{Binding VM_FlightTime}" Minimum="0" Width="952" Height="20" IsSnapToTickEnabled="True" TickFrequency="1"
+                   Value="{Binding VM_CurrentLineIndex}" IsMoveToPointEnabled="True"/>
+                <TextBlock x:Name="SecTimeLeft" Height="18" Text="{Binding VM_CurrentFlightTime,Mode=OneWay}"/>
+                <Button Command="{Binding DecreaseTheSpeed}" Height="26" Width="29" Margin="1,0,0,0">
+                    <Image Source="/Controls/ControlImages/math-minus-icon.png" Height="20" Width="25" Margin="5,0,1,0" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+                </Button>
+                <TextBlock x:Name="speed" Height="18"  Text="{Binding VM_VideoSpeed,Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" Width="22"></TextBlock>
+                <Button Command="{Binding IncreaseTheSpeed}" Height="26" Width="29" Margin="1,0,0,0">
+                    <Image Source="/Controls/ControlImages/math-add-icon.png" Height="20" Width="20" Margin="-15,0,-20,0"/>
+                </Button>
+            </ToolBar>
+        </DockPanel>
+
+    </Grid>
+</UserControl>

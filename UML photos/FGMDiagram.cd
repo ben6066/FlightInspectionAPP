@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Flight_Inspection_App.Client">
+    <Position X="1.25" Y="0.75" Width="1.25" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAwAAAAAAAAAAEBAAAAAAIAEQAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Client.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Flight_Inspection_App.FGM" BaseTypeListCollapsed="true">
+    <Position X="5" Y="1.75" Width="1.25" />
+    <AssociationLine Name="_telnetClient" Type="Flight_Inspection_App.Client" FixedFromPoint="true">
+      <Path>
+        <Point X="5" Y="1.926" />
+        <Point X="2.5" Y="1.926" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="_intresingFeature" Type="Flight_Inspection_App.Feature" FixedFromPoint="true">
+      <Path>
+        <Point X="6.25" Y="3.498" />
+        <Point X="12.25" Y="3.498" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="_features" Type="Flight_Inspection_App.Feature" FixedToPoint="true">
+      <Path>
+        <Point X="6.25" Y="3.25" />
+        <Point X="12.25" Y="3.25" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="AnomaliesDescriptions" Type="System.Collections.Generic.List&lt;T&gt;" FixedToPoint="true">
+      <Path>
+        <Point X="6.25" Y="8.438" />
+        <Point X="9.5" Y="8.438" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="AnomalyPoints" Type="System.Collections.Generic.List&lt;T&gt;" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.25" Y="5.779" />
+        <Point X="10.312" Y="5.779" />
+        <Point X="10.312" Y="8.25" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="CorrelationPoints" Type="System.Collections.Generic.List&lt;T&gt;" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.25" Y="14.229" />
+        <Point X="10.75" Y="14.229" />
+        <Point X="10.75" Y="8.812" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.366" Y="0.17" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="MostCorreltiveFeaturePoints" Type="System.Collections.Generic.IList&lt;T&gt;" FixedToPoint="true">
+      <Path>
+        <Point X="6.25" Y="5" />
+        <Point X="8.5" Y="5" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="FeaturePoints" Type="System.Collections.Generic.IList&lt;T&gt;" FixedToPoint="true">
+      <Path>
+        <Point X="6.25" Y="4.625" />
+        <Point X="8.5" Y="4.625" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Features" Type="System.Collections.Generic.List&lt;T&gt;" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.25" Y="13.755" />
+        <Point X="10.438" Y="13.755" />
+        <Point X="10.438" Y="8.812" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="lastCorrelationPoints" Type="System.Collections.Generic.List&lt;T&gt;" FixedToPoint="true">
+      <Path>
+        <Point X="6.25" Y="8.75" />
+        <Point X="9.5" Y="8.75" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>EAaIRqURCGsBcilApMhZqIhE6IASXA0CIA0IIzNAcFg=</HashCode>
+      <FileName>FGM.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_telnetClient" />
+      <Field Name="wh" />
+      <Field Name="_intresingFeature" />
+      <Property Name="AnomaliesDescriptions" />
+      <Property Name="AnomalyPoints" />
+      <Property Name="CorrelationPoints" />
+      <Property Name="MostCorreltiveFeaturePoints" />
+      <Property Name="FeaturePoints" />
+      <Property Name="Features" />
+      <Property Name="lastCorrelationPoints" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="_features" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Threading.ManualResetEvent" Collapsed="true">
+    <Position X="1.25" Y="3" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Flight_Inspection_App.Feature">
+    <Position X="12.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAARAAAQgAgACQAAAAQAAIAAAQAAgAEwAgABgEA=</HashCode>
+      <FileName>Feature.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Collections.Generic.List&lt;T&gt;" Collapsed="true">
+    <Position X="9.5" Y="8.25" Width="1.5" />
+    <NestedTypes>
+      <Class Name="System.Collections.Generic.List&lt;T&gt;.Enumerator" Collapsed="true">
+        <TypeIdentifier />
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier />
+  </Class>
+  <Interface Name="Flight_Inspection_App.IModel" Collapsed="true">
+    <Position X="4.5" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="System.Collections.Generic.IList&lt;T&gt;" Collapsed="true">
+    <Position X="8.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
